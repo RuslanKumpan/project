@@ -1,0 +1,202 @@
+.modal-mask {
+    position: fixed;
+    z-index: 9998;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: table;
+    transition: opacity 0.3s ease;
+  }
+  
+  .modal-wrapper {
+    display: table-cell;
+    vertical-align: middle;
+  }
+  
+  .modal-container {
+    width: 900px;
+    margin: 0px auto;
+    padding: 0px 0 54px;
+    background: linear-gradient(254.72deg, rgba(255, 255, 255, 0.276) -114.85%, rgba(255, 255, 255, 0) 69.04%), url("/img/D-flying.svg") no-repeat top right 25%, url("/img/D-footer.svg") no-repeat bottom right, #040613;
+    color: #fff;
+    border-radius: 2px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.33);
+    transition: all 0.3s ease;
+    font-family: "Montserrat", sans-serif;
+  }
+  
+  .modal-header h3 {
+    margin: 27px 0px;
+    color: #fff;
+    font-weight: 700;
+    font-size: 36px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .modal-body {
+    margin: 20px 0;
+  }
+  
+  .modal-default-button {
+    float: left;
+    background: #f14d34;
+    border: 2px solid #f14d34;
+    border-radius: 10px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 500;
+    outline: 0;
+    box-shadow: none;
+    margin: 0;
+    width: 33px;
+    height: 33px;
+    display: block;
+    line-height: 1;
+    transition: background 300ms;
+    transition: width 300ms;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .modal-default-button span:nth-child(1) {
+    padding-right: 7px;
+    font-size: 24px;
+  }
+  .modal-default-button span:nth-child(2) {
+    padding: 2px;
+    font-size: 12px;
+  }
+  
+  .modal-default-button:hover {
+    width: 120px;
+  }
+  
+  .modal-enter {
+    opacity: 0;
+  }
+  
+  .modal-leave-active {
+    opacity: 0;
+  }
+  
+  .modal-enter .modal-container,
+  .modal-leave-active .modal-container {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+  
+  .field--form-popup form {
+    width: 600px;
+    max-width: 100%;
+    padding: 0 0 0 42px;
+  }
+  .field--form-popup form input, .field--form-popup form textarea {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    line-height: 1.2;
+    font-weight: 500;
+    font-size: 14px;
+    padding: 26px 24px;
+    color: #fff;
+  }
+  .field--form-popup form input:focus, .field--form-popup form textarea:focus {
+    border-color: #f14d34;
+    outline: 0;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #f44336;
+  }
+  .field--form-popup form .form-group {
+    margin-bottom: 7px;
+  }
+  .field--form-popup form input::-webkit-input-placeholder, .field--form-popup form textarea::-webkit-input-placeholder {
+    color: #fff;
+    font-size: 14px;
+  }
+  .field--form-popup form input:-ms-input-placeholder, .field--form-popup form textarea:-ms-input-placeholder {
+    color: #fff;
+    font-size: 14px;
+  }
+  .field--form-popup form input::-moz-placeholder, .field--form-popup form textarea::-moz-placeholder {
+    color: #fff;
+    font-size: 14px;
+  }
+  .field--form-popup form .form-type-checkbox {
+    position: relative;
+  }
+  .field--form-popup form .form-type-checkbox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    left: 6px;
+    top: 12px;
+    margin: 0;
+  }
+  .field--form-popup form .form-type-checkbox input ~ .custom-checkbox:after {
+    content: "";
+    display: block;
+    width: 21px;
+    height: 21px;
+    background: url("/img/checked-icon.svg") no-repeat center;
+    background-size: contain;
+    transition: opacity 200ms, transform 400ms;
+    transform: rotateZ(-30deg);
+    opacity: 0;
+  }
+  .field--form-popup form .form-type-checkbox input:checked ~ .custom-checkbox:after {
+    opacity: 1;
+    transform: initial;
+  }
+  .field--form-popup form .form-type-checkbox input:focus ~ .custom-checkbox {
+    border-color: #f14d34;
+    outline: 0;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #f44336;
+  }
+  .field--form-popup form .form-type-checkbox label {
+    padding-left: 38px;
+    font-size: 12px;
+    color: #fff;
+  }
+  .field--form-popup form .form-type-checkbox .custom-checkbox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+  }
+  @media (max-width: 991px) {
+    .field--form-popup form {
+      margin-top: 0;
+    }
+  }
+  @media (max-width: 767px) {
+    .field--form-popup form {
+      margin: auto;
+    }
+  }
+  .field--form-popup .btn, .field--form-popup .btn:active, .field--form-popup .btn:focus {
+    background: #f14d34;
+    border: 2px solid #f14d34;
+    border-radius: 5px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 12px;
+    outline: 0;
+    box-shadow: none;
+    margin: 0;
+    display: block;
+    width: 100%;
+    padding: 20px 14px;
+    line-height: 1;
+    transition: background 300ms;
+  }
+  .field--form-popup .btn:hover {
+    background: transparent;
+  }
